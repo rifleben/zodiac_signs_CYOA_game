@@ -53,24 +53,36 @@ sign_readings = {
     launches its many pursuits like blazing arrows, chasing after geographical, intellectual, and spiritual 
     adventures. """
 }
+print("""
+        O,
+      ,OOO,
+'oooooOOOOOooooo'
+  `OOOOOOOOOOO`
+    `OOOOOOO`
+    OOOO'OOOO
+   OOO'   'OOO
+  O'         'O
+""")
 
+print("* you come across a computer in an old library.... ter terminal reads: ")
 while True:
     user_sign = input("Please enter your star sign: ").title()
     while user_sign not in sign_readings:
         print("Ahh, I can not help you here... you do not have a sign under the stars, tell me again, now SERIOUSLY!!!")
+        print("")
         user_sign = input("Please enter your star sign: ").title()
 
-    print("Welcome to the world of wonder, my precious, and who might you be... you are familiar?")
+    print("Welcome to the world of wonder, my precious, and who might you be... you look familiar.")
     name = input("ENTER YOUR NAME: ")
     while name == "":
         print("Try again... you left it empty...")
         name = input("ENTER YOUR NAME: ")
 
-    print("Ahhh yes...." + name + " I knew you'd come in to seek the ways of the stars....")
-    print("Something tells me, you're a " + user_sign + " is that right?")
+    print("Ahhh yes...." + name + ", I knew you'd come in to seek the ways of the stars....")
+    print("Something tells me, you're a " + user_sign + ", is that right?")
     answer_1 = input("Enter 'Yes' or 'No'  followed by enter key: ")
     if answer_1.lower() == "yes":
-        continue
+        pass
     else:
         print("Hmmm... that's odd, the spirits normally don't do me wrong...")
         print("Tell me then, what are your stars?")
@@ -78,4 +90,41 @@ while True:
         while user_sign not in sign_readings:
             print("Ahh, I can not help you here... you do not have a sign under the stars, tell me again, now SERIOUSLY!!!")
             user_sign = input("Please enter your star sign: ").title()
-        print("Right... a, " + user_sign + ".")
+
+    print("Right... a, " + user_sign + ".")
+    print("Would you like to know the attributes of your star sign?")
+    print("")
+
+    answer_2 = input("Enter 'Yes' or 'No'  followed by enter key: ")
+    if answer_2.lower() == "yes":
+        pass
+    else:
+        print("Then I have nothing more for you... Goodbye!")
+
+    print("""Well then, as a {user_sign}, ... 
+          {attributes}""".format(user_sign=user_sign, attributes=sign_readings[user_sign.title()]))
+    print()
+    print("Well then... that is all I have for you...")
+    print("... unless")
+    print("would you like to know your lucky number?")
+    print("")
+    answer_3 = input("Enter 'Yes' or 'No'  followed by enter key: ")
+    if answer_3.lower() == "yes":
+        print("Your lucky number is... " + str(randint(1, 10000)) + ".")
+        print("Do with that information what you must...")
+        print("")
+
+    print("Well, that is all for now... goodbye!")
+    print("")
+    print("*** the computer hums and returns the original screen...")
+
+    print("""
+            O,
+          ,OOO,
+    'oooooOOOOOooooo'
+      `OOOOOOOOOOO`
+        `OOOOOOO`
+        OOOO'OOOO
+       OOO'   'OOO
+      O'         'O
+    """)
